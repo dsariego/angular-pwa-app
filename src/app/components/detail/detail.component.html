@@ -1,0 +1,38 @@
+<div class="container mt-3 pb-3 animate__animated animate__backInDown">
+    <div *ngIf="item" class="row animate__faceIn p-5">
+        <img class="rounded border border-secondary img-fluid shadow p-2 mb-3" src="{{item.imageUrl}}" title="{{item.fullName}}" alt="{{item.fullName}}">
+        <h2 class="text-center">{{item.fullName}}</h2>
+        <!-- <p class="font-monospace"><strong class="text-uppercase">Nombre:</strong> {{item.firstName}} </p>
+        <p class="font-monospace"><strong class="text-uppercase">Apellidos:</strong> {{item.lastName}} </p>
+        <p class="font-monospace"><strong class="text-uppercase">Título:</strong> {{item.title}} </p>
+        <p class="font-monospace"><strong class="text-uppercase">Familia:</strong> {{item.family}} </p>  -->     
+    </div>
+
+    <!-- <div class="d-inline p-2 text-white">
+        <a routerLink="/" class="btn btn-danger">Mostrar más detalles<span class="material-icons align-middle">expand_less</span><span class="material-icons align-middle">expand_more</span></a>
+    </div> -->
+
+        <mat-accordion class="example-accordion btn">
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false"
+                                 >
+              <mat-expansion-panel-header class="example-headers-align btn btn-danger">
+                <mat-panel-title>
+                  Mostrar más detalles
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div *ngIf="item" class="font-monospace">
+                <p><strong class="text-uppercase">Nombre:</strong> {{item.firstName}} </p>
+                <p><strong class="text-uppercase">Apellidos:</strong> {{item.lastName}} </p>
+                <p><strong class="text-uppercase">Título:</strong> {{item.title}} </p>
+                <p><strong class="text-uppercase">Familia:</strong> {{item.family}} </p>       
+            </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+    <div class="d-inline p-2 text-white">
+        <a routerLink="/" class="btn btn-primary"><span class="material-icons align-middle">chevron_left</span>Atrás</a>
+    </div>
+
+
+</div>
