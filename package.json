@@ -9,7 +9,7 @@
     "test": "ng test",
     "dev:ssr": "ng run angular-pwa-app:serve-ssr",
     "serve:ssr": "node dist/angular-pwa-app/server/main.js",
-    "build:ssr": "ng build && ng run angular-pwa-app:server",
+    "build:ssr": "ng build --prod --outputHashing=all && ng run angular-pwa-app:server",
     "prerender": "ng run angular-pwa-app:prerender"
   },
   "private": true,
